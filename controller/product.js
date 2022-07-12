@@ -1,7 +1,7 @@
 import ProductModel from '../model/product.js'
 
 
-class Product{
+class Product {
     constructor(name,price){
         this.name = name;
         this.price = price;

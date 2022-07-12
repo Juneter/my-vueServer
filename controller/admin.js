@@ -16,7 +16,7 @@ class Admin{
       //验证表单
       if ( !username || !password) {
         res.send({
-          status: 1,
+          status: -1,
           msg: '表单信息有误'
         })
         return
@@ -45,7 +45,7 @@ class Admin{
 
         } else if(!bcrypt.compareSync(password,admin.password)){
           res.send({
-            status: 1,
+            status: -1,
             msg: '用户名或密码错误'
           })
         } else {
