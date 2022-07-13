@@ -20,16 +20,17 @@ class Base {
         });
 
         form.parse(req, (err, fields, files) => {
-            // console.log('feilds:', fields)
-            // console.log('files', files)
-        })
-
-        // let filePath = path.dirname(__dirname);
-        console.log(__dirname)
-
-        res.send({
-            stats: 0,
-            // filePath
+            console.log('files', files.file.name)
+            if (err)  {
+                res.send({
+                    status: -1,
+                    msg: '上传失败'
+                })
+                return
+            }
+            res.send({
+                status: 1
+            })
         })
     }
 }
