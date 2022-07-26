@@ -2,6 +2,7 @@
 node_modules
 /dist
 记录文件
+upload
 
 
 /tests/e2e/videos/

@@ -2,7 +2,9 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema({
     title: String,
-    price: Number
+    pics: Array,
+    price: Number,
+    details: Array
 });
 
 const Product = mongoose.model('product', Schema);
