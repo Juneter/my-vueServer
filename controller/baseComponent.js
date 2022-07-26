@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename)
 
 class Base {
     constructor() {
-        idList: ['product_id', 'img_id',]
+        this.idList = ['product_id', 'img_id',]
     }
 
     upload(req, res) {
