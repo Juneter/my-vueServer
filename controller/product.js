@@ -1,3 +1,4 @@
+import CounterModel from '../model/seq.js'
 import ProductModel from '../model/product.js'
 
 
@@ -33,12 +34,9 @@ class Product {
             return
         }
 
-        ProductModel.create(newProduct, () => {
-            res.send({
-                status: 0,
-                msg: '接收添加商品请求'
-            })
-        })
+
+
+
     }
 }
 

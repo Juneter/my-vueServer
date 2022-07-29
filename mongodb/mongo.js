@@ -1,10 +1,12 @@
 import mongoose from 'mongoose';
 import config from '../config/config.js';
 
-mongoose.connect(config.database,{
+mongoose.connect(config.database, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
-},error => {
+    useUnifiedTopology: true,
+    autoIndex: false,
+    useFindAndModify: false
+}, error => {
     if (error) {
         console.log('数据库连接出错');
         return
@@ -14,7 +16,7 @@ mongoose.connect(config.database,{
 
 const db = mongoose.connection;
 
-db.on('close',()=>{
+db.on('close', () => {
     console.log('数据库断开');
 });
 
